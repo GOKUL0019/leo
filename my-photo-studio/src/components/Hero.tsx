@@ -113,7 +113,7 @@ const Hero = () => {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/60 z-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/60 z-0"></div>
     </section>
   );
 };

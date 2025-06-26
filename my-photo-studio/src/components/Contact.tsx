@@ -100,7 +100,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -186,25 +185,14 @@ const Contact = () => {
             )}
           </motion.div>
 
-          {/* Contact Info & Map */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Contact Info */}
-            {/* You can retain your original map and info section here */}
-             <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-8"
-          >
-            {/* Contact Details */}
             <div className="glass-effect p-6 rounded-2xl">
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-              
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-gold-500/20 p-3 rounded-full">
@@ -224,9 +212,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">WhatsApp</p>
-                    <a 
-                      href="https://wa.me/919443212840" 
-                      target="_blank" 
+                    <a
+                      href="https://wa.me/919443212840"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-400 hover:text-green-300 transition-colors"
                     >
@@ -241,43 +229,37 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">Location</p>
-                    <p className="text-gray-300">68.Gedilam BypassRoad</p>
-                    <p className="text-gray-300">TACBEA, Cuddalore– 607002</p>
+                    <p className="text-gray-300">68.Gedilam Bypass Road</p>
+                    <p className="text-gray-300">TACBEA, Cuddalore – 607002</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Google Map */}
             <div className="glass-effect p-6 rounded-2xl">
               <h3 className="text-xl font-bold text-white mb-4">Find Us</h3>
               <div className="w-full h-64 rounded-lg overflow-hidden">
                 <a
-  href="https://www.google.com/maps/place/LEO+HD+VIDEO+%26+STUDIO/@11.7480782,79.755332,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5499955df19cff:0x1bb00a5144a8b3f7!8m2!3d11.748073!4d79.7579069!16s%2Fg%2F11mvq058sk?entry=ttu"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ display: "block", width: "100%", height: "100%" }}
->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.336631729679!2d79.755332!3d11.7480782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5499955df19cff%3A0x1bb00a5144a8b3f7!2sLEO%20HD%20VIDEO%20%26%20STUDIO!5e0!3m2!1sen!2sin!4v1719398820000!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0, pointerEvents: "none" }} // makes iframe unclickable so the link is clickable
-          loading="lazy"
-          
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-</a>
-
-                
+                  href="https://www.google.com/maps/place/LEO+HD+VIDEO+%26+STUDIO/@11.7480782,79.755332,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "block", width: "100%", height: "100%" }}
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.336631729679!2d79.755332!3d11.7480782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5499955df19cff%3A0x1bb00a5144a8b3f7!2sLEO%20HD%20VIDEO%20%26%20STUDIO!5e0!3m2!1sen!2sin!4v1719398820000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, pointerEvents: "none" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </a>
               </div>
             </div>
-            </motion.div>
-    </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
-    
   );
 };
 
