@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   🌈 Design Tokens (Theme System)
+   =============================== */
+@layer base {
+  :root {
+    --background: 220 26% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 26% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 26% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 45 93% 58%;
+    --primary-foreground: 220 26% 6%;
+
+    --secondary: 220 26% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 26% 14%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 220 26% 14%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 26% 14%;
+    --input: 220 26% 14%;
+    --ring: 45 93% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 26% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 45 93% 58%;
+    --sidebar-primary-foreground: 220 26% 6%;
+    --sidebar-accent: 220 26% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 26% 14%;
+    --sidebar-ring: 45 93% 58%;
+  }
+}
+
+/* ===============================
+   🔧 Base Styles
+   =============================== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+/* ===============================
+   🔧 Utilities
+   =============================== */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
+
+/* ===============================
+   🖱️ Custom Scrollbar
+   =============================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.5); /* Tailwind's yellow-500 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.8);
+}
